@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 1200 1600" 
+     width="1200" 
+     height="1600" 
+     style="background-color: #002BFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+
+            <filter id="asset-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45" />
+            </filter>
+            
+            <pattern id="pattern-bg-halftone-top" width="16.0" height="16.0" patternUnits="userSpaceOnUse" patternTransform="rotate(45.0)">
+                <circle cx="8.0" cy="8.0" r="3.0" fill="#FFFFFF" opacity="0.75" />
+            </pattern>
+            
+            <pattern id="pattern-bg-halftone-bottom" width="16.0" height="16.0" patternUnits="userSpaceOnUse" patternTransform="rotate(45.0)">
+                <circle cx="8.0" cy="8.0" r="3.0" fill="#FFFFFF" opacity="0.75" />
+            </pattern>
+            
+</defs>
+<rect id="base-canvas" width="1200" height="1600" fill="#002BFF" />
+<rect id="bg-halftone-top" x="650.0" y="40.0" width="500.0" height="300.0" fill="url(#pattern-bg-halftone-top)" />
+<rect id="bg-halftone-bottom" x="320.0" y="1100.0" width="350.0" height="450.0" fill="url(#pattern-bg-halftone-bottom)" />
+<rect id="ambient-gradient-blob" x="220.0" y="120.0" width="760.0" height="1250.0" rx="380.0" fill="#FF8CA3"  opacity="0.35"  />
+<g id="hero-sliced-man" >
+            <rect x="340.0" y="200.0" width="520.0" height="900.0" fill="none" stroke="#FFFFFF" stroke-dasharray="6,6" opacity="0.35" />
+            <rect x="360.0" y="625.0" width="480.0" height="50" rx="8" fill="#000000" opacity="0.4" />
+            <text x="600.0" y="656.0" fill="#FFFFFF" opacity="0.85" font-size="16" font-weight="600" text-anchor="middle">⚡ [Hero 3D Asset Slot: Alpha Cutout]</text>
+        </g>
+<rect id="crossbar-rect" x="420.0" y="680.0" width="500.0" height="32.0" rx="4.0" fill="#F3F0EC"    />
+<circle id="white-circle-focal" cx="705.0" cy="1095.0" r="65.0" fill="#FFFFFF"   />
+<g id="white-cross-x" transform="translate(1000.0, 870.0) rotate(45) translate(-1000.0, -870.0)">
+                <rect x="880.0" y="858.0" width="240.0" height="24" fill="#FFFFFF" />
+                <rect x="988.0" y="750.0" width="24" height="240.0" fill="#FFFFFF" />
+            </g>
+<text id="text-instagram-label" x="120.0" y="140.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 18.0px; font-weight: 500; fill: #FFFFFF; letter-spacing: 1.0px"   opacity="1.0">+ instagram:</text>
+<text id="text-instagram-handle" x="120.0" y="168.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 22.0px; font-weight: 700; fill: #FFFFFF; letter-spacing: 0.5px"   opacity="1.0">@madebystudiojq</text>
+<text id="text-collection-label" x="980.0" y="180.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 18.0px; font-weight: 600; fill: #FFFFFF"  writing-mode="vertical-rl" opacity="1.0">Collection</text>
+<text id="text-year-2018" x="1040.0" y="160.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 64.0px; font-weight: 900; fill: #FFFFFF"   opacity="1.0">2018</text>
+<text id="text-poster-label" x="120.0" y="1380.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 20.0px; font-weight: 600; fill: #FFFFFF"   opacity="1.0">Poster</text>
+<line id="poster-rule-line" x1="190.0" y1="1374.0" x2="250.0" y2="1374.0" stroke="#FFFFFF" stroke-width="2.5"  />
+<text id="text-poster-number" x="120.0" y="1460.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 72.0px; font-weight: 900; fill: #FFFFFF"   opacity="1.0">76</text>
+<text id="text-sg-brand" x="1080.0" y="1460.0" text-anchor="end" style="font-family: 'Helvetica Neue', sans-serif; font-size: 56.0px; font-weight: 900; fill: #FFFFFF"   opacity="1.0">S&amp;G</text>
+<text id="text-copyright-vertical" x="1065.0" y="1220.0" text-anchor="start" style="font-family: 'Helvetica Neue', sans-serif; font-size: 15.0px; font-weight: 500; fill: #FFFFFF"  writing-mode="vertical-rl" opacity="0.85">Jonathan Quintin Copyrighted © 2018</text>
+</svg>

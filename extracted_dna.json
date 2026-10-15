@@ -1,0 +1,50 @@
+{
+  "aesthetic_genre": "Contemporary Digital Surrealism",
+  "vibe_keywords": [
+    "vibrant",
+    "surreal",
+    "dynamic",
+    "abstract",
+    "energetic"
+  ],
+  "palette": {
+    "background": "#2200FF",
+    "primary": "#FFFFFF",
+    "secondary": "#FF00FF",
+    "accent": "#FF77AA",
+    "extra_colors": [
+      "#00FFCC",
+      "#FFCC00"
+    ]
+  },
+  "negative_space_ratio": 0.3,
+  "grid_system": "asymmetric_split",
+  "typography_rules": [
+    {
+      "category": "hero_display",
+      "font_family": "Helvetica Neue",
+      "suggested_weight": "black",
+      "suggested_case": "uppercase",
+      "tracking": 0.05
+    },
+    {
+      "category": "section_header",
+      "font_family": "Helvetica Neue",
+      "suggested_weight": "bold",
+      "suggested_case": "uppercase",
+      "tracking": 0.1
+    },
+    {
+      "category": "metadata_small",
+      "font_family": "Helvetica Neue",
+      "suggested_weight": "normal",
+      "suggested_case": "lowercase",
+      "tracking": 0.02
+    }
+  ],
+  "has_isolated_3d_subject": true,
+  "suggested_procedural_patterns": [
+    "halftone_dots",
+    "wireframe_splines"
+  ]
+}
