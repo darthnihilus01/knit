@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 1200 1600" 
+     width="1200" 
+     height="1600" 
+     style="background-color: #F5F0EB; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+
+            <filter id="asset-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45" />
+            </filter>
+            
+</defs>
+<rect id="base-canvas" width="1200" height="1600" fill="#F5F0EB" />
+<circle id="shape_1" cx="300.0" cy="350.0" r="150.0" fill="#F0614A"  opacity="0.9" />
+<rect id="shape_2" x="400.0" y="100.0" width="200.0" height="500.0"  fill="#1A4747"  opacity="0.9" transform="rotate(15.0 500.0 350.0)" />
+<circle id="shape_3" cx="825.0" cy="475.0" r="125.0" fill="#F7B846"  opacity="0.9" />
+<rect id="shape_4" x="100.0" y="600.0" width="400.0" height="150.0"  fill="#F8B8C1"  opacity="0.9" transform="rotate(-10.0 300.0 675.0)" />
+<circle id="shape_5" cx="950.0" cy="800.0" r="100.0" fill="#F0614A"  opacity="0.9" />
+<rect id="shape_6" x="550.0" y="800.0" width="300.0" height="100.0"  fill="#1A4747"  opacity="0.9" transform="rotate(20.0 700.0 850.0)" />
+<text id="headline" x="140.0" y="1050.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 90.0px; font-weight: bold; fill: #1A4747; letter-spacing: 4.5px; text-transform: uppercase"   opacity="1.0">THE BEST SHOW</text>
+<text id="subtitle" x="140.0" y="1160.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 32.0px; font-weight: bold; fill: #F0614A; letter-spacing: 1.0px; text-transform: uppercase"   opacity="1.0">xyz.io</text>
+<text id="date_time" x="140.0" y="1250.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 20.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.6px; text-transform: uppercase"   opacity="1.0">SERIES 2026 • LIVE</text>
+<text id="venue" x="140.0" y="1280.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 20.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.6px; text-transform: uppercase"   opacity="1.0">BROADCAST ONLINE</text>
+<text id="metadata_1" x="140.0" y="1450.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 16.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.28px; text-transform: uppercase"   opacity="1.0">A Livid &amp; Baseful Production</text>
+<text id="metadata_2" x="140.0" y="1475.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 16.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.28px; text-transform: uppercase"   opacity="1.0">curated by xyz.io</text>
+<text id="metadata_3" x="140.0" y="1500.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 16.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.28px; text-transform: uppercase"   opacity="1.0">www.xyz.io/the-best-show</text>
+<text id="metadata_4" x="140.0" y="1525.0" text-anchor="start" style="font-family: 'Geometric Sans-serif', sans-serif; font-size: 16.0px; font-weight: normal; fill: #1A4747; letter-spacing: 1.28px; text-transform: uppercase"   opacity="1.0">All Rights Reserved © 2026</text>
+</svg>

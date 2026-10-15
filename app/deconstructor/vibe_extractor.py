@@ -69,9 +69,9 @@ class VibeExtractor:
             "4. Typography Rules: Detect font moods, weights, letter-spacing, and casing styles.\n"
             "5. Hero Subject: Is there a 3D surreal sculpture, chiseled object, or photo cutout?\n"
             "6. Procedural Patterns: Halftone dot matrices, topographic wireframe contours, grid lines, or none.\n\n"
-            "CRITICAL REQUIREMENT: Output MUST be valid, parseable JSON conforming EXACTLY to this JSON Schema:\n"
+            "CRITICAL REQUIREMENT: Output MUST be valid, complete, parseable JSON conforming EXACTLY to this JSON Schema:\n"
             f"{schema_json}\n\n"
-            "Do not include any conversational preamble, commentary, or markdown formatting outside the JSON."
+            "Keep your response concise. Do not exceed 4 typography rules. No commentary outside the JSON."
         )
 
         user_content = [
@@ -95,7 +95,7 @@ class VibeExtractor:
                 {"role": "user", "content": user_content},
             ],
             "temperature": 0.2,
-            "max_tokens": 2500,
+            "max_tokens": 4000,
             "response_format": {"type": "json_object"},
         }
 
@@ -119,14 +119,29 @@ class VibeExtractor:
             )
 
         resp_json = response.json()
-        raw_content = resp_json["choices"][0]["message"]["content"].strip()
+        choice = resp_json["choices"][0]
+        raw_content = choice["message"]["content"].strip()
+        finish_reason = choice.get("finish_reason")
 
-        # Clean any accidental markdown code fences
+        if finish_reason == "length":
+            print("WARNING: Model response was truncated by max_tokens limit!")
+
+        # Clean markdown code fences if present
         if raw_content.startswith("```"):
-            raw_content = raw_content.split("```")[1]
-            if raw_content.startswith("json"):
-                raw_content = raw_content[4:]
+            parts = raw_content.split("```")
+            if len(parts) >= 2:
+                raw_content = parts[1]
+                if raw_content.startswith("json"):
+                    raw_content = raw_content[4:]
         raw_content = raw_content.strip()
 
-        parsed_data = json.loads(raw_content)
+        try:
+            parsed_data = json.loads(raw_content)
+        except json.JSONDecodeError as e:
+            print("FAILED TO PARSE RAW JSON. First 500 chars:")
+            print(raw_content[:500])
+            print("Last 500 chars:")
+            print(raw_content[-500:])
+            raise e
+
         return DesignDNA.model_validate(parsed_data)

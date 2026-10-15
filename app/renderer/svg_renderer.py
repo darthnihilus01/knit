@@ -93,6 +93,22 @@ class SVGRenderer:
             """
             rendered = f'<rect id="{layer.id}" x="{layer.x}" y="{layer.y}" width="{layer.width}" height="{layer.height}" fill="url(#{pattern_id})" />'
 
+        elif layer.pattern_type == "wireframe_splines":
+            # Procedural parallel wave contours / ribbons (Bauhaus style)
+            paths = []
+            spacing = max(layer.spacing, 8.0)
+            num_lines = int(min(layer.height / spacing, 60))
+            for i in range(num_lines):
+                y_pos = layer.y + i * spacing
+                x1, x2 = layer.x, layer.x + layer.width
+                cx1 = layer.x + layer.width * 0.35
+                cx2 = layer.x + layer.width * 0.65
+                cy1 = y_pos - 40
+                cy2 = y_pos + 40
+                d = f"M {x1} {y_pos} C {cx1} {cy1}, {cx2} {cy2}, {x2} {y_pos}"
+                paths.append(f'<path d="{d}" fill="none" stroke="{layer.color}" stroke-width="1.5" opacity="{layer.opacity}" />')
+            rendered = f'<g id="{layer.id}">{"".join(paths)}</g>'
+
         return rendered, pattern_def
 
     def _render_vector_shape(self, layer: VectorShapeLayer) -> str:
@@ -116,6 +132,10 @@ class SVGRenderer:
                 p1, p2 = layer.points[0], layer.points[1]
                 return f'<line id="{layer.id}" x1="{p1[0]}" y1="{p1[1]}" x2="{p2[0]}" y2="{p2[1]}" {stroke_attr} {opacity_attr} />'
             return f'<line id="{layer.id}" x1="{layer.x}" y1="{layer.y}" x2="{layer.x + layer.width}" y2="{layer.y + layer.height}" {stroke_attr} {opacity_attr} />'
+
+        elif layer.shape == "polygon" and layer.points:
+            pts_str = " ".join(f"{p[0]},{p[1]}" for p in layer.points)
+            return f'<polygon id="{layer.id}" points="{pts_str}" {fill_attr} {stroke_attr} {opacity_attr} {transform} />'
 
         elif layer.shape == "cross":
             # Stylized geometric 'X' shape

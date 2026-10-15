@@ -1,0 +1,42 @@
+{
+  "aesthetic_genre": "Modern Geometric Bauhaus",
+  "vibe_keywords": [
+    "livid",
+    "baseful",
+    "geometric",
+    "organic",
+    "flowing",
+    "connected"
+  ],
+  "palette": {
+    "background": "#F5F0EB",
+    "primary": "#1A4747",
+    "secondary": "#F0614A",
+    "accent": "#F7B846",
+    "extra_colors": [
+      "#F8B8C1"
+    ]
+  },
+  "negative_space_ratio": 0.35,
+  "grid_system": "centered_focal",
+  "typography_rules": [
+    {
+      "category": "hero_display",
+      "font_family": "Geometric Sans-serif",
+      "suggested_weight": "bold",
+      "suggested_case": "uppercase",
+      "tracking": 0.05
+    },
+    {
+      "category": "metadata_small",
+      "font_family": "Geometric Sans-serif",
+      "suggested_weight": "normal",
+      "suggested_case": "uppercase",
+      "tracking": 0.08
+    }
+  ],
+  "has_isolated_3d_subject": false,
+  "suggested_procedural_patterns": [
+    "wireframe_splines"
+  ]
+}
